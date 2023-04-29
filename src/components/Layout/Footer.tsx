@@ -37,7 +37,10 @@ const Footer = () => {
       </div>
       <div className="absolute inset-x-0 w-fit bottom-2 mx-auto text-white text-xs">
         Desarrollado por{' '}
-        <a href="https://github.com/diorrego" className="underline">
+        <a
+          href="https://github.com/diorrego/adconsulting.cl"
+          className="underline"
+        >
           Diego Orrego
         </a>{' '}
         <span className="text-lg">🤖</span>
