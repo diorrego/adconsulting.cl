@@ -1,38 +1,57 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# adconsulting.cl
 
-## Getting Started
+## :sparkles: AD Consulting landing page
 
-First, run the development server:
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) for AD Consulting company.
 
-```bash
+## :wrench: Development technologies and tools
+
+- [React](https://reactjs.org/) - A JavaScript library for building user interfaces.
+- [Next.js](https://nextjs.org/) - The React Framework for the Web.
+- [Typescript](https://www.typescriptlang.org/) - Strongly typed programming language that builds on JavaScript.
+- [Tailwindcss](https://tailwindcss.com/) - CSS framework.
+- [PostCSS](https://postcss.org/) - A tool for transforming CSS with JavaScript.
+- [Node.js](https://nodejs.org/) - JavaScript runtime environment.
+
+## :rocket: Installation and production
+
+[Next.js](https://nextjs.org/) requires [Node.js](https://nodejs.org/) version 16.8.0 or newer.
+
+Install the dependencies and devDependencies and run the development environment.
+
+```sh
+npm ci
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## :computer: Local development environment
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+Features of my computer and the code editor.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+| Feature     | Detail                                                      |
+| ----------- | ----------------------------------------------------------- |
+| Hardware    | Dell Inc. Latitude 3500                                     |
+| Ram         | 16,0 GiB                                                    |
+| Processor   | Intel® Core™ i7-8565U CPU @ 1.80GHz × 8                     |
+| Graphics    | NVIDIA Corporation GM108M [GeForce MX130]                   |
+| SDD         | 256,1 GB                                                    |
+| SO          | [Ubuntu](https://ubuntu.com/) 22.10 - 64 bits               |
+| Code editor | [Visual Studio Code](https://code.visualstudio.com/) 1.76.2 |
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## :tomato: About author
 
-## Learn More
+Diego Orrego, engineer and innovative entrepreneur.
 
-To learn more about Next.js, take a look at the following resources:
+[GitHub](https://github.com/diorrego)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+[LinkedIn](https://www.linkedin.com/in/diorrego/)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+[crunchbase](https://www.crunchbase.com/person/diego-orrego)
 
-## Deploy on Vercel
+[Twitter](https://twitter.com/diorrego)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## :page_facing_up: License
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+MIT
