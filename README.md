@@ -13,7 +13,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 - [PostCSS](https://postcss.org/) - A tool for transforming CSS with JavaScript.
 - [Node.js](https://nodejs.org/) - JavaScript runtime environment.
 
-## :rocket: Installation and production
+## :rocket: Installation and run
 
 [Next.js](https://nextjs.org/) requires [Node.js](https://nodejs.org/) version 16.8.0 or newer.
 
