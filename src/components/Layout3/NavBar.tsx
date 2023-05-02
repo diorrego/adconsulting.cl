@@ -40,18 +40,14 @@ const NavBar = () => {
   return (
     <>
       <nav
-        className={`fixed top-0 inset-x-0 flex flex-row justify-between items-center w-full duration-500 z-50 h-24 px-4 sm:px-32 xl:px-60 text-lg ${
-          scrolled
-            ? 'shadow-sm shadow-[#ED7423]/70  bg-white text-neutral-900'
-            : 'shadow-sm shadow-neutral-400 bg-[#ED7423] text-white'
-        }`}
+        className={`fixed top-0 inset-x-0 flex flex-row justify-between items-center w-full duration-500 z-50 h-24 px-4 sm:px-32 xl:px-60 text-lg 'shadow-sm shadow-[#ED7423]/70  bg-white text-neutral-900'
+            shadow-sm  text-neutral-800
+        `}
       >
         <div className="flex flex-row space-x-6 items-center">
           <Link href="/">
             <div
-              className={`hover:scale-[1.01] transition-all p-1 h-20 w-20 rounded-full flex items-center justify-center ${
-                scrolled && 'bg-[#ED7423]'
-              }`}
+              className={`hover:scale-[1.01] transition-all p-1 h-12 w-20 rounded-lg flex items-center justify-center bg-[#ED7423]`}
             >
               <AD className="scale-[1.40]" />
             </div>
@@ -73,9 +69,8 @@ const NavBar = () => {
         </div>
         {notMobile ? (
           <button
-            className={`rounded-full h-fit py-3 px-4 hover:scale-[1.01] transition-all ${
-              scrolled ? 'bg-[#ED7423] text-white' : 'bg-white text-neutral-900'
-            }`}
+            className={`rounded-lg h-fit py-3 px-4 hover:scale-[1.01] transition-all
+              bg-[#ED7423] text-white`}
           >
             Hablemos
           </button>
