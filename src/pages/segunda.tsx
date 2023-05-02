@@ -63,7 +63,7 @@ export const getServerSideProps = async () => {
   return {
     props: {
       image: {
-        url: 'https://ik.imagekit.io/dior7woku/woku-landing/SEO/landingPreviewV2.webp?updatedAt=1682561984313',
+        url: 'https://media.licdn.com/dms/image/D4E22AQEod7ujhseQxQ/feedshare-shrink_1280/0/1682716239512?e=1686182400&v=beta&t=_9R5TNkYKmKupxyq5TBeF5T2FkABu_pLVB40bX2WzBQ',
       },
     },
   };
