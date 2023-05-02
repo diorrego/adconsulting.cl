@@ -25,6 +25,7 @@ const Hero2 = () => {
           width="2000"
           height="100"
           className="scale-x-[-1]"
+          priority
         />
       </div>
     </main>
