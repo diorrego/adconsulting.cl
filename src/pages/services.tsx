@@ -1,13 +1,15 @@
 import Head from 'next/head';
+import Image from 'next/image';
 
-import Layout3 from '../components/Layout3';
-import Hero3 from '../components/Hero3';
+import Layout from '../components/Layout';
+
+import services from '../../public/SERVICES.png';
 
 interface HomeProps {
   image: { url: string };
 }
 
-export default function Segunda({ image }: HomeProps) {
+export default function Us({ image }: HomeProps) {
   return (
     <>
       <Head>
@@ -52,9 +54,13 @@ export default function Segunda({ image }: HomeProps) {
         <link rel="icon" href="/favicon.ico" />
         <link rel="canonical" href="https://adconsulting.cl" key="canonical" />
       </Head>
-      <Layout3>
-        <Hero3 />
-      </Layout3>
+      <Layout>
+      <div className="py-40 flex flex-col space-y-8 items-center">
+          <h1 className="font-montserrat text-[2.5rem] leading-tight sm:text-7xl text-center">
+            Servicios
+          </h1>
+          <Image src={services} alt="servicios"/></div>
+      </Layout>
     </>
   );
 }

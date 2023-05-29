@@ -2,6 +2,10 @@ import Head from 'next/head';
 
 import Layout from '../components/Layout';
 import Hero from '../components/Hero';
+import Clients from '../components/Clients';
+import Benefits from '../components/Benefits';
+import Testimonials from '../components/Testimonials';
+import CallToAction from '../components/CallToAction';
 
 interface HomeProps {
   image: { url: string };
@@ -54,6 +58,10 @@ export default function Home({ image }: HomeProps) {
       </Head>
       <Layout>
         <Hero />
+        <Clients />
+        <Benefits />
+        <Testimonials />
+        <CallToAction />
       </Layout>
     </>
   );

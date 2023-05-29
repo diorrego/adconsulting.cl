@@ -58,12 +58,12 @@ const NavBar = () => {
           </Link>
           {notMobile && (
             <>
-              <Link href="/segunda">
+              <Link href="/us">
                 <p className="pl-4 cursor-pointer hover:scale-[1.01] transition-all">
                   Nosotros
                 </p>
               </Link>
-              <Link href="/tercera">
+              <Link href="/services">
                 <p className="cursor-pointer hover:scale-[1.01] transition-all">
                   Servicios
                 </p>
