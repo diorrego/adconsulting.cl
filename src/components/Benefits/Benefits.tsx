@@ -20,9 +20,9 @@ const Benefits = () => {
             </h2>
             <p className="sm:text-xl">
               En AD, nos encargamos de todo el proceso de selección, desde la
-              identificación de candidatos hasta la realización de entrevistas y
-              evaluaciones, liberándote de tareas administrativas para que te
-              enfoques en hacer crecer tu negocio.
+              identificación de candidatos y candidatas hasta la realización de
+              entrevistas y evaluaciones, liberándote de tareas administrativas
+              para que te enfoques en hacer crecer tu negocio.
             </p>
           </div>
         </ScrollReveal>
@@ -33,10 +33,10 @@ const Benefits = () => {
               Crea conexiones de impacto
             </h2>
             <p className="sm:text-xl">
-              En AD, nos enorgullece contar con una amplia y diversa red de
-              profesionales talentosos. Accedemos a una variedad de contactos y
-              recursos, lo que nos permite identificar a los candidatos más
-              prometedores para tu empresa.
+              Nos enorgullece contar con una amplia y diversa red de
+              profesionales talentosos y talentosas. Esto nos permite
+              identificar a los candidatos y candidatas más prometedores para tu
+              empresa.
             </p>
           </div>
           <Connect className=" sm:scale-100 scale-75" />
@@ -48,12 +48,9 @@ const Benefits = () => {
               Soluciones a tu medida
             </h2>
             <p className="sm:text-xl">
-              Somos tu socio estratégico en gestión de talento. Ofrecemos una
-              amplia gama de servicios para abordar todas tus necesidades,
-              brindándote soluciones adaptadas a tu empresa. Nuestro enfoque
-              personalizado nos permite comprender tus desafíos y objetivos
-              específicos, diseñando estrategias a medida que impulsan tu éxito
-              empresarial.
+              Somos tu socio estratégico en gestión de talento. Ofrecemos
+              servicios adaptados a tus necesidades empresariales, comprendiendo
+              desafíos y diseñando estrategias a medida para impulsar tu éxito.
             </p>
           </div>
         </ScrollReveal>

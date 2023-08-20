@@ -20,9 +20,7 @@ export default function Us({ image }: HomeProps) {
   return (
     <>
       <Head>
-        <title>
-          AD Consulting | Seleccionamos y Potenciamos el Talento de tu Empresa
-        </title>
+        <title>AD Consulting | Servicios</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="keywords"
@@ -32,11 +30,8 @@ export default function Us({ image }: HomeProps) {
           name="description"
           content="Más de 11 años de experiencia en procesos de Head Hunting, Reclutamiento y Selección de Talentos, Outplacement, Capacitación y Coaching Ejecutivo"
         />
-        <meta
-          property="og:title"
-          content="AD Consulting | Seleccionamos y Potenciamos el Talento de tu Empresa"
-        />
-        <meta property="og:url" content="https://adconsulting.cl" />
+        <meta property="og:title" content="AD Consulting | Servicios" />
+        <meta property="og:url" content="https://adconsulting.cl/servicios" />
         <meta property="og:image" content={image?.url} />
         <meta property="og:type" content="website" />
         <meta
@@ -44,10 +39,7 @@ export default function Us({ image }: HomeProps) {
           content="Más de 11 años de experiencia en procesos de Head Hunting, Reclutamiento y Selección de Talentos, Outplacement, Capacitación y Coaching Ejecutivo"
         />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:title"
-          content="AD Consulting | Seleccionamos y Potenciamos el Talento de tu Empresa"
-        />
+        <meta name="twitter:title" content="AD Consulting | Servicios" />
         <meta
           name="twitter:description"
           content="Más de 11 años de experiencia en procesos de Head Hunting, Reclutamiento y Selección de Talentos, Outplacement, Capacitación y Coaching Ejecutivo"
@@ -59,7 +51,11 @@ export default function Us({ image }: HomeProps) {
         <meta name="googlebot" content="index,follow" />
         <meta charSet="utf-8" />
         <link rel="icon" href="/favicon.ico" />
-        <link rel="canonical" href="https://adconsulting.cl" key="canonical" />
+        <link
+          rel="canonical"
+          href="https://adconsulting.cl/servicios"
+          key="canonical"
+        />
       </Head>
       <Layout>
         <div className="relative pt-28 sm:pt-40 pb-40 flex flex-col space-y-8 sm:space-y-16 items-center bg-gradient-to-tr from-[#E46E26] via-[#EB8547] to-[#FFAE48] text-white">
@@ -146,7 +142,7 @@ export const getServerSideProps = async () => {
   return {
     props: {
       image: {
-        url: 'https://media.licdn.com/dms/image/D4E22AQEod7ujhseQxQ/feedshare-shrink_1280/0/1682716239512?e=1686182400&v=beta&t=_9R5TNkYKmKupxyq5TBeF5T2FkABu_pLVB40bX2WzBQ',
+        url: 'https://ik.imagekit.io/dior7woku/ad-consulting/previewPhoto.webp?updatedAt=1692544312682',
       },
     },
   };

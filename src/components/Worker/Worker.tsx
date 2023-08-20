@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import { AiFillLinkedin } from 'react-icons/ai';
 import { motion, AnimatePresence } from 'framer-motion';
+import { HiOutlineX } from 'react-icons/hi';
 
 interface WorkerProps {
   src: any;
@@ -54,20 +55,26 @@ const Worker = ({
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
             onClick={closeWorker}
-            className="fixed inset-0 w-screen h-screen bg-black/70 flex items-center justify-center z-[60] cursor-pointer px-6 sm:px-0"
+            className="fixed inset-0 w-screen h-screen bg-black/70 flex items-center justify-center z-[60] cursor-pointer sm:pt-16 sm:pb-32 sm:px-0 overflow-hidden overscroll-none"
           >
             <div
-              className="flex flex-col space-y-4 sm:space-y-0 sm:flex-row items-center sm:space-x-6 sm:w-1/2 sm:h-1/2 bg-white rounded-lg p-5 sm:p-8 cursor-default"
+              className="relative flex flex-col space-y-4 sm:space-y-0 sm:flex-row items-center sm:space-x-6 w-full h-full sm:w-1/2 sm:h-1/2 bg-white sm:rounded-lg p-5 sm:p-8 cursor-default overflow-hidden overscroll-none"
               onClick={(e) => e.stopPropagation()}
             >
+              <button
+                className="absolute top-2 right-2 font-bold text-2xl text-neutral-600"
+                onClick={closeWorker}
+              >
+                <HiOutlineX className="text-3xl" />
+              </button>
               <Image
                 src={src}
                 alt={name}
-                className="rounded-full h-full w-full basis-1/2"
+                className="rounded-full w-52 sm:h-full sm:w-full sm:basis-1/2"
               />
               <div className="flex flex-col items-start space-y-4">
                 <div className="flex flex-row justify-between items-center w-full">
-                  <h2 className="text-3xl sm:text-4xl font-semibold">{name}</h2>
+                  <h2 className="text-2xl sm:text-4xl font-semibold">{name}</h2>
                   <a
                     href={linkedIn}
                     title={`LinkedIn de ${name}`}

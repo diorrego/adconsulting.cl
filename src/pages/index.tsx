@@ -17,9 +17,7 @@ export default function Home({ image }: HomeProps) {
   return (
     <>
       <Head>
-        <title>
-          AD Consulting | Seleccionamos y Potenciamos el Talento de tu Empresa
-        </title>
+        <title>AD Consulting | Seleccionamos y Potenciamos el Talento</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="keywords"
@@ -74,7 +72,7 @@ export const getServerSideProps = async () => {
   return {
     props: {
       image: {
-        url: 'https://media.licdn.com/dms/image/D4E22AQEod7ujhseQxQ/feedshare-shrink_1280/0/1682716239512?e=1686182400&v=beta&t=_9R5TNkYKmKupxyq5TBeF5T2FkABu_pLVB40bX2WzBQ',
+        url: 'https://ik.imagekit.io/dior7woku/ad-consulting/previewPhoto.webp?updatedAt=1692544312682',
       },
     },
   };
