@@ -13,7 +13,7 @@ interface LottieAnimationProps {
 const LottieAnimation = ({
   animationData,
   renderer = 'svg',
-  loop = false,
+  loop = true,
   autoplay = true,
   className,
   ...props

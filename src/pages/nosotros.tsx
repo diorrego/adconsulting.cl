@@ -73,16 +73,28 @@ export default function Us({ image }: HomeProps) {
         <link rel="canonical" href="https://adconsulting.cl" key="canonical" />
       </Head>
       <Layout>
-        <div className="py-40 flex flex-col space-y-8">
-          <h1 className="font-montserrat text-[2.5rem] leading-tight sm:text-7xl text-center">
-            Nuestro equipo
-          </h1>
-          <h2 className="text-lg sm:text-2xl text-center w-[40rem] mx-auto">
-            En AD contamos con un equipo compuesto de profesionales motivados y comprometidos con potenciar los talentos de tu empresa
-          </h2>
+        <div className="py-40 flex flex-col space-y-8 sm:space-y-16">
+          <div className="flex flex-col space-y-4">
+            <h1 className="font-montserrat leading-tight text-center text-4xl sm:text-6xl">
+              Nuestro equipo
+            </h1>
+            <h2 className="sm:text-xl text-center w-[40rem] mx-auto">
+              En AD contamos con un equipo compuesto de profesionales motivados
+              y comprometidos con potenciar los talentos de tu empresa
+            </h2>
+          </div>
           <section className="flex flex-wrap items-center justify-center gap-2 px-24 mx-auto">
-            <div onClick={ariClickHandler} className="w-96 h-[28rem] transition-all cursor-pointer flex flex-col" onMouseEnter={handleHover}
-              onMouseLeave={handleHover}>{isHovered ? <Image src={ariHover} alt="ariela" /> : <Image src={ari} alt="ariela" />}
+            <div
+              onClick={ariClickHandler}
+              className="w-96 h-[28rem] transition-all cursor-pointer flex flex-col"
+              onMouseEnter={handleHover}
+              onMouseLeave={handleHover}
+            >
+              {isHovered ? (
+                <Image src={ariHover} alt="ariela" />
+              ) : (
+                <Image src={ari} alt="ariela" />
+              )}
               <h2 className="font-bold">Ariela Dymensztain</h2>
               <h3>Directora</h3>
             </div>
@@ -139,23 +151,43 @@ export default function Us({ image }: HomeProps) {
           </section>
         </div>
       </Layout>
-      {showAri && <div className="fixed inset-0 w-screen h-screen z-50 bg-black/80 flex items-center justify-center" onClick={closeAri}>
-        <div onClick={(e) => e.stopPropagation()} className="flex flex-row space-x-8 bg-white p-4 rounded-lg w-[50rem]">
-          <Image src={ariHover} alt="ariela" className="h-96 object-cover w-96" />
-          <div className="flex flex-col space-y-4"><h2 className="font-bold">Ariela Dymensztain</h2>
-            <h3>Directora</h3>
-            <p>{'"Agradecida de la vida, de las oportunidades que Chile me ha brindado, convencida de que el verdadero aprendizaje proviene de las experiencias"'}</p>
-            <p>Psicológa, coach y empresaria</p>
-            <p className="font-semibold">Liderazgo - Empatía - Inteligencia Social</p>
-            <a
-              href="https://www.linkedin.com/in/ariela-dymensztain-ad/"
-              title="LinkedIn de Ariela"
-              aria-label="LinkedIn de Ariela"
-            ><AiFillLinkedin className="text-3xl cursor-pointer" />
-            </a>
+      {showAri && (
+        <div
+          className="fixed inset-0 w-screen h-screen z-50 bg-black/80 flex items-center justify-center"
+          onClick={closeAri}
+        >
+          <div
+            onClick={(e) => e.stopPropagation()}
+            className="flex flex-row space-x-8 bg-white p-4 rounded-lg w-[50rem]"
+          >
+            <Image
+              src={ariHover}
+              alt="ariela"
+              className="h-96 object-cover w-96"
+            />
+            <div className="flex flex-col space-y-4">
+              <h2 className="font-bold">Ariela Dymensztain</h2>
+              <h3>Directora</h3>
+              <p>
+                {
+                  '"Agradecida de la vida, de las oportunidades que Chile me ha brindado, convencida de que el verdadero aprendizaje proviene de las experiencias"'
+                }
+              </p>
+              <p>Psicológa, coach y empresaria</p>
+              <p className="font-semibold">
+                Liderazgo - Empatía - Inteligencia Social
+              </p>
+              <a
+                href="https://www.linkedin.com/in/ariela-dymensztain-ad/"
+                title="LinkedIn de Ariela"
+                aria-label="LinkedIn de Ariela"
+              >
+                <AiFillLinkedin className="text-3xl cursor-pointer" />
+              </a>
+            </div>
           </div>
         </div>
-      </div>}
+      )}
     </>
   );
 }

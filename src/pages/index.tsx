@@ -1,10 +1,10 @@
+import { useRef } from 'react';
 import Head from 'next/head';
 
 import Layout from '../components/Layout';
 import Hero from '../components/Hero';
 import Clients from '../components/Clients';
 import Benefits from '../components/Benefits';
-import Testimonials from '../components/Testimonials';
 import CallToAction from '../components/CallToAction';
 
 interface HomeProps {
@@ -12,6 +12,8 @@ interface HomeProps {
 }
 
 export default function Home({ image }: HomeProps) {
+  const CTARef = useRef<HTMLDivElement>(null);
+
   return (
     <>
       <Head>
@@ -56,12 +58,13 @@ export default function Home({ image }: HomeProps) {
         <link rel="icon" href="/favicon.ico" />
         <link rel="canonical" href="https://adconsulting.cl" key="canonical" />
       </Head>
-      <Layout>
+      <Layout CTARef={CTARef}>
         <Hero />
         <Clients />
         <Benefits />
-        <Testimonials />
-        <CallToAction />
+        <div ref={CTARef}>
+          <CallToAction />
+        </div>
       </Layout>
     </>
   );

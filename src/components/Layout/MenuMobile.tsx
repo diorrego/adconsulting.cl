@@ -1,12 +1,13 @@
 import { useEffect, useRef } from 'react';
 import Link from 'next/link';
-import { m } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 interface MenuMobileProps {
   closeMobileMenu: Function;
+  goToCTA: () => void;
 }
 
-const MenuMobile = ({ closeMobileMenu }: MenuMobileProps) => {
+const MenuMobile = ({ closeMobileMenu, goToCTA }: MenuMobileProps) => {
   const menuMobileRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -29,7 +30,7 @@ const MenuMobile = ({ closeMobileMenu }: MenuMobileProps) => {
   }, [menuMobileRef]);
 
   return (
-    <m.div
+    <motion.div
       ref={menuMobileRef}
       initial={{ x: 400 }}
       animate={{ x: 0 }}
@@ -46,28 +47,29 @@ const MenuMobile = ({ closeMobileMenu }: MenuMobileProps) => {
       </button>
       <ul className="flex flex-col space-y-6 pl-10 pt-10 h-full">
         <li>
-          <Link href="/">
+          <Link href="/nosotros">
             <div className="text-lg font-semibold leading-normal hover:scale-[1.01] transition-all pl-3">
               Nosotros
             </div>
           </Link>
         </li>
         <li>
-          <Link href="/segunda">
+          <Link href="/servicios">
             <button className="text-lg font-semibold leading-normal hover:scale-[1.01] transition-all pb-2 pl-3">
               Servicios
             </button>
           </Link>
         </li>
         <li>
-          <Link href="/tercera">
-            <button className="rounded-full h-fit py-3 px-4 hover:scale-[1.01] transition-all bg-[#ED7423] text-white">
-              Hablemos
-            </button>
-          </Link>
+          <button
+            className="rounded-full h-fit py-3 px-4 hover:scale-[1.01] transition-all bg-[#ED7423] text-white text-lg font-semibold"
+            onClick={goToCTA}
+          >
+            Hablemos
+          </button>
         </li>
       </ul>
-    </m.div>
+    </motion.div>
   );
 };
 

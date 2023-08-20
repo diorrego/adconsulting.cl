@@ -1,4 +1,5 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, RefObject } from 'react';
+import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { HiMenu } from 'react-icons/hi';
 
@@ -8,10 +9,16 @@ import MenuMobile from './MenuMobile';
 
 import useMediaQuery from '../../hooks/useMediaQuery';
 
-const NavBar = () => {
-  const [scrolled, setScrolled] = useState(false);
+interface NavBarProps {
+  CTARef: RefObject<HTMLDivElement> | undefined;
+}
+
+const NavBar = ({ CTARef }: NavBarProps) => {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
+  const [goCTA, setGoCTA] = useState(false);
   const notMobile = useMediaQuery('sm');
+  const router = useRouter();
+  const pathname = router.pathname;
 
   const closeMobileMenu = () => {
     setShowMobileMenu(false);
@@ -21,50 +28,60 @@ const NavBar = () => {
     setShowMobileMenu(true);
   };
 
+  const goToCTA = () => {
+    setShowMobileMenu(false);
+
+    if (pathname !== '/') {
+      router.push('/');
+    }
+
+    setGoCTA(true);
+  };
+
   useEffect(() => {
-    const updateNavBar = () => {
-      if (window.scrollY >= 100) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
+    if (pathname === '/' && CTARef) {
+      const CTA = CTARef.current;
+
+      if (CTA && goCTA) {
+        if (!notMobile) {
+          window.scrollTo({
+            top: CTA.offsetTop - 10,
+            behavior: 'smooth',
+          });
+        } else {
+          window.scrollTo({
+            top: CTA.offsetTop - 100,
+            behavior: 'smooth',
+          });
+        }
       }
-    };
-
-    window.addEventListener('scroll', updateNavBar);
-
-    return () => {
-      window.removeEventListener('scroll', updateNavBar);
-    };
-  }, []);
+      setGoCTA(false);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [goCTA]);
 
   return (
     <>
       <nav
-        className={`fixed top-0 inset-x-0 flex flex-row justify-between items-center w-full duration-500 z-50 h-24 px-4 sm:px-32 xl:px-60 text-lg ${
-          scrolled
-            ? 'shadow-sm shadow-[#ED7423]/70  bg-white text-neutral-900'
-            : 'shadow-sm shadow-neutral-400 bg-[#ED7423] text-white'
-        }`}
+        className={`fixed top-0 inset-x-0 flex flex-row justify-between items-center w-full duration-500 z-50 h-18 px-4 sm:px-32 xl:px-60 text-lg shadow shadow-orange-600/40 bg-[#ED7423] text-white`}
       >
         <div className="flex flex-row space-x-6 items-center">
           <Link href="/">
             <div
-              className={`hover:scale-[1.01] transition-all p-1 h-20 w-20 rounded-full flex items-center justify-center ${
-                scrolled && 'bg-[#ED7423]'
-              }`}
+              className={`hover:scale-[1.01] transition-all p-1 h-20 w-20 rounded-full flex items-center justify-center`}
             >
               <AD className="scale-[1.40]" />
             </div>
           </Link>
           {notMobile && (
             <>
-              <Link href="/us">
-                <p className="pl-4 cursor-pointer hover:scale-[1.01] transition-all">
+              <Link href="/nosotros">
+                <p className="pl-4 cursor-pointer hover:scale-[1.01] transition-all font-semibold">
                   Nosotros
                 </p>
               </Link>
-              <Link href="/services">
-                <p className="cursor-pointer hover:scale-[1.01] transition-all">
+              <Link href="/servicios">
+                <p className="cursor-pointer hover:scale-[1.01] transition-all font-semibold">
                   Servicios
                 </p>
               </Link>
@@ -73,9 +90,8 @@ const NavBar = () => {
         </div>
         {notMobile ? (
           <button
-            className={`rounded-full h-fit py-3 px-4 hover:scale-[1.01] transition-all ${
-              scrolled ? 'bg-[#ED7423] text-white' : 'bg-white text-neutral-900'
-            }`}
+            className={`rounded-full h-fit py-3 px-4 hover:scale-[1.01] transition-all bg-white text-orange-600 font-bold`}
+            onClick={goToCTA}
           >
             Hablemos
           </button>
@@ -86,14 +102,14 @@ const NavBar = () => {
             onClick={MenuMobileButtonClickHandler}
           >
             <HiMenu
-              className={`text-5xl hover:scale-[1.01] transition-all ${
-                scrolled ? 'text-neutral-700' : ' text-white'
-              }`}
+              className={`text-5xl hover:scale-[1.01] transition-all text-white`}
             />
           </button>
         )}
       </nav>
-      {showMobileMenu && <MenuMobile closeMobileMenu={closeMobileMenu} />}
+      {showMobileMenu && (
+        <MenuMobile closeMobileMenu={closeMobileMenu} goToCTA={goToCTA} />
+      )}
     </>
   );
 };
