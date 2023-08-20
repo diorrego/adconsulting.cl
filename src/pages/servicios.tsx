@@ -62,7 +62,7 @@ export default function Us({ image }: HomeProps) {
         <link rel="canonical" href="https://adconsulting.cl" key="canonical" />
       </Head>
       <Layout>
-        <div className="relative pt-32 sm:pt-40 pb-40 flex flex-col space-y-8 sm:space-y-16 items-center bg-gradient-to-tr from-[#E46E26] via-[#EB8547] to-[#FFAE48] text-white">
+        <div className="relative pt-28 sm:pt-40 pb-40 flex flex-col space-y-8 sm:space-y-16 items-center bg-gradient-to-tr from-[#E46E26] via-[#EB8547] to-[#FFAE48] text-white">
           <div className="flex flex-col space-y-4">
             <h1 className="font-montserrat leading-tight text-center text-4xl sm:text-6xl">
               Nuestros Servicios
