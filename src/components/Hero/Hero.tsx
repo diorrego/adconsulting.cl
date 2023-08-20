@@ -1,24 +1,37 @@
-import LottieAnimation from '../../components/LottieAnimation';
+import { motion } from 'framer-motion';
+
+import LottieAnimation from '../LottieAnimation';
+import Wave from '../Wave';
 
 import useMediaQuery from '../../hooks/useMediaQuery';
 
-import hero from '../lotties/5IwYExIEiK.json';
+import heroOrange from '../lotties/heroOrange.json';
 
 const Hero = () => {
-  const notMobile = useMediaQuery('lg');
+  const notMobile = useMediaQuery('sm');
 
   return (
-    <main className="flex sm:flex-row justify-between pt-40 items-center px-4 sm:px-32 xl:px-60">
-      <div className="flex flex-col space-y-4 sm:max-w-[50rem]">
-        <h1 className="font-montserrat text-[2.5rem] leading-tight sm:text-7xl">
+    <main className="relative flex sm:flex-row justify-between py-40 sm:py-32 items-end px-4 sm:px-32 xl:px-60 bg-gradient-to-tr from-[#E46E26] via-[#EB8547] to-[#FFAE48] sm:h-[75vh]">
+      <div className="flex flex-col space-y-4 sm:max-w-[45rem] text-white sm:pb-20">
+        <h1 className="font-montserrat leading-tight text-4xl sm:text-6xl">
           Seleccionamos y potenciamos el talento de tu empresa
         </h1>
-        <h2 className="text-lg sm:text-2xl">
-          Más de 11 años de experiencia en procesos de Head Hunting, Reclutamiento,
-          Selección de Talentos, Outplacement, Capacitación y Coaching Ejecutivo
+        <h2 className="sm:text-xl">
+          Más de <span className="font-bold">11 años de experiencia</span> en
+          procesos de Head Hunting, Reclutamiento, Selección de Talentos,
+          Outplacement, Capacitación y Coaching Ejecutivo
         </h2>
       </div>
-      {notMobile && <LottieAnimation animationData={hero} />}
+      {notMobile && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.3 }}
+        >
+          <LottieAnimation animationData={heroOrange} />
+        </motion.div>
+      )}
+      <Wave className="absolute -bottom-1 w-full left-0" />
     </main>
   );
 };

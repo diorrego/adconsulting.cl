@@ -5,5 +5,23 @@
 @tailwind utilities;
 
 body {
-  @apply bg-white text-neutral-900
+  @apply bg-white text-neutral-800;
+}
+
+.glass {
+  border-radius: 16px;
+  background: linear-gradient(
+    225deg,
+    rgba(243, 243, 243, 0.9) 0%,
+    rgba(243, 243, 243, 0.4) 100%
+  );
+  backdrop-filter: blur(21px);
+}
+
+.gradient-box {
+  border-radius: 16px;
+  background: var(
+    --gradiente,
+    linear-gradient(133deg, #e46e26 0%, #ffae48 100%)
+  );
 }

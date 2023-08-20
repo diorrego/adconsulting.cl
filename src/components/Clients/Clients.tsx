@@ -1,30 +1,65 @@
 import Image from 'next/image';
-import mundo from '../../../public/logoMundo.webp';
-import aleman from '../../../public/LogoDSC.jpg';
-import andes from '../../../public/logoAndesSalud.png';
-import crecic from '../../../public/logoCrecic.jpg';
-import ust from '../../../public/logoUST.jpeg';
-import cpc from '../../../public/logoCPC.png';
-import caleman from '../../../public/logoCAdescarga.jpeg';
-import saint from '../../../public/logoSJ.png';
+
+import aleman from '../../../public/DSC.webp';
+import innergy from '../../../public/Innergy.webp';
+import isola from '../../../public/isola.webp';
+import saint from '../../../public/saintJohns.webp';
+import tomas from '../../../public/santoTomas.webp';
+import chequen from '../../../public/Chequen.webp';
+
+import ScrollReveal from '../ScrollReveal';
+import useMediaQuery from '../../hooks/useMediaQuery';
 
 const Clients = () => {
+  const notMobile = useMediaQuery('sm');
+
   return (
-    <section className="flex flex-col space-y-16 py-16">
-      <h2 className="text-center text-3xl font-bold py-8">Nuestros clientes</h2>
-      <div className="flex flex-row items-center justify-center space-x-16 h-full">
-        <Image src={andes} alt="andes" className="w-56 h-20 object-cover" />
-        <Image src={aleman} alt="aleman" className="w-20 h-20 object-cover" />
-        <Image src={mundo} alt="mundo" className="w-56 h-20 object-cover" />
-        <Image src={crecic} alt="mundo" className="w-20 h-20 object-cover" />
-      </div>
-      <div className="flex flex-row items-center justify-center space-x-16 h-full">
-        <Image src={ust} alt="andes" className="w-56 h-20 object-cover" />
-        <Image src={caleman} alt="aleman" className="w-20 h-20 object-cover" />
-        <Image src={cpc} alt="mundo" className="w-36 h-20 object-cover flex" />
-        <Image src={saint} alt="aleman" className="w-20 h-20 object-cover" />
-      </div>
-      <h3 className="text-center text-2xl ">¡Y más de 100 empresas confían en nosotros!</h3>
+    <section className="relative flex flex-col space-y-12 pt-16 pb-32">
+      <h2 className="text-center text-3xl sm:text-4xl font-medium text-orange-600 max-w-[40rem] mx-auto">
+        ¡Impactando en la productividad de{' '}
+        <span className="font-extrabold">+100 empresas</span>!
+      </h2>
+      <ScrollReveal>
+        <div className="flex flex-row items-center justify-center h-full">
+          <Image
+            src={innergy}
+            alt="Innergy"
+            className="w-48 sm:h-40 sm:w-80 object-contain"
+          />
+          <Image
+            src={aleman}
+            alt="Colegio Aleman"
+            className="w-48 sm:h-40 sm:w-80 object-contain"
+          />
+
+          {notMobile && (
+            <Image
+              src={isola}
+              alt="andes"
+              className="h-40 w-80 object-contain"
+            />
+          )}
+        </div>
+        <div className="flex flex-row items-center justify-center h-full">
+          <Image
+            src={chequen}
+            alt="Empresas Chequén"
+            className="w-48 sm:h-40 sm:w-80 object-contain"
+          />
+          <Image
+            src={tomas}
+            alt="Universidad Santo Tomás"
+            className="w-48 sm:h-40 sm:w-80 object-contain"
+          />
+          {notMobile && (
+            <Image
+              src={saint}
+              alt="Colegio Saint John's"
+              className="h-40 w-80 object-contain"
+            />
+          )}
+        </div>
+      </ScrollReveal>
     </section>
   );
 };
