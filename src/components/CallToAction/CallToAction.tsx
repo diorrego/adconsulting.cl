@@ -16,25 +16,29 @@ const CallToAction = () => {
         <label className="flex flex-col space-y-2 w-full">
           <p>Nombre</p>
           <input
-            className="border border-neutral-400 rounded-md p-1 w-full h-14 bg-white"
+            className="border border-neutral-400 rounded-md p-1 w-full h-14 bg-white text-neutral-800 outline-orange-200"
             placeholder="Ingresa tu nombre"
           />
         </label>
         <label className="flex flex-col space-y-2 w-full">
           <p>Empresa</p>
           <input
-            className="border border-neutral-400 rounded-md p-1 w-full h-14 bg-white"
+            className="border border-neutral-400 rounded-md p-1 w-full h-14 bg-white text-neutral-800 outline-orange-200"
             placeholder="Ingresa tu empresa"
           />
         </label>
         <label className="flex flex-col space-y-2 w-full">
           <p>Email</p>
           <input
-            className="border border-neutral-400 rounded-md p-1 w-full h-14 bg-white"
+            className="border border-neutral-400 rounded-md p-1 w-full h-14 bg-white text-neutral-800 outline-orange-200"
+            text-neutral-800
             placeholder="Ingresa tu email"
           />
         </label>
-        <button className="bg-white rounded-full p-4 text-orange-600 drop-shadow-sm font-bold">
+        <button
+          type="submit"
+          className="bg-white rounded-full p-4 text-orange-600 drop-shadow-sm font-bold"
+        >
           ¡Conectemos!
         </button>
       </form>

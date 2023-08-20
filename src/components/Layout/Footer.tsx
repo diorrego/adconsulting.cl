@@ -56,15 +56,6 @@ const Footer = () => {
           AD Consulting | San Martín 553 of. 1004, Edificio Millenium II
           Concepción, Chile
         </div>
-        <div>
-          Desarrollado por{' '}
-          <a
-            href="https://github.com/diorrego/adconsulting.cl"
-            className="underline"
-          >
-            Diego Orrego
-          </a>
-        </div>
       </div>
     </footer>
   );

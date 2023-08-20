@@ -73,7 +73,7 @@ export default function Us({ image }: HomeProps) {
             </h2>
           </div>
           <div className="grid sm:grid-cols-2 gap-4 sm:gap-20 grid-cols-1 text-neutral-800 px-4 sm:px-32 xl:px-60">
-            <div className="glass p-4 text-center flex flex-col items-center justify-center max-w-[30rem] drop-shadow-md space-y-4">
+            <div className="glass p-4 sm:p-8 text-center flex flex-col items-center justify-center max-w-[30rem] drop-shadow-md space-y-4">
               <Image src={hunting} alt="Head Hunting" />
               <h2 className="text-3xl sm:text-4xl font-semibold">
                 Head Hunting
@@ -84,7 +84,7 @@ export default function Us({ image }: HomeProps) {
                 feroz.
               </h3>
             </div>
-            <div className="glass p-4 text-center flex flex-col items-center justify-center max-w-[30rem] drop-shadow-md space-y-4">
+            <div className="glass p-4 sm:p-8 text-center flex flex-col items-center justify-center max-w-[30rem] drop-shadow-md space-y-4">
               <Image src={selection} alt="Reclutamiento y Selección" />
               <h2 className="text-3xl sm:text-4xl font-semibold">
                 Reclutamiento y Selección
@@ -95,7 +95,7 @@ export default function Us({ image }: HomeProps) {
                 complicaciones.
               </h3>
             </div>
-            <div className="glass p-4 text-center flex flex-col items-center justify-center max-w-[30rem] drop-shadow-md space-y-4">
+            <div className="glass p-4 sm:p-8 text-center flex flex-col items-center justify-center max-w-[30rem] drop-shadow-md space-y-4">
               <Image src={coaching} alt="Coaching Ejecutivo" />
               <h2 className="text-3xl sm:text-4xl font-semibold">
                 Coaching Ejecutivo
@@ -106,7 +106,7 @@ export default function Us({ image }: HomeProps) {
                 las personas.
               </h3>
             </div>
-            <div className="glass p-4 text-center flex flex-col items-center justify-center max-w-[30rem] drop-shadow-md space-y-4">
+            <div className="glass p-4 sm:p-8 text-center flex flex-col items-center justify-center max-w-[30rem] drop-shadow-md space-y-4">
               <Image src={outplacement} alt="Outplacement" />
               <h2 className="text-3xl sm:text-4xl font-semibold">
                 Outplacement

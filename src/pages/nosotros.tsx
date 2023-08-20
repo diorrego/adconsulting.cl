@@ -1,6 +1,9 @@
 import Head from 'next/head';
 
-import ari from '../../public/ariHover.jpeg';
+import ari from '../../public/ari.webp';
+import mane from '../../public/mane.webp';
+import joce from '../../public/joce.webp';
+import stephy from '../../public/stephy.webp';
 
 import Layout from '../components/Layout';
 
@@ -18,8 +21,44 @@ const workers = [
     description:
       '"Agradecida de la vida, de las oportunidades que Chile me ha brindado, convencida de que el verdadero aprendizaje proviene de las experiencias"',
     titles: 'Psicológa, coach y empresaria',
-    strengths: 'Liderazgo - Empatía - Inteligencia Social',
+    strengths:
+      'Cercanía y Afectividad - Inteligencia Social - Lealtad y Compromiso con el Entorno',
     linkedIn: 'https://www.linkedin.com/in/ariela-dymensztain-ad/',
+  },
+  {
+    src: joce,
+    name: 'Jocelyn Bon',
+    charge: 'Jefa de Selección',
+    description:
+      '"Esfuérzate a diario con muchas ganas, porque el esfuerzo es lo que te acercará cada día más a tus metas”',
+    titles: 'Psicológa',
+    strengths:
+      'Capacidad Analítica y Apertura de Mente - Prudencia - Curiosidad y Ganas de Experimentar',
+    linkedIn: 'https://www.linkedin.com/in/jocelyn-bon-brevis-b9527527/',
+  },
+  {
+    src: mane,
+    name: 'Magdalena Faundes',
+    charge: 'Coordinadora de Selección - Encargada de Bienestar',
+    description:
+      '"En nuestro equipo, cada uno de nosotros aporta lo mejor que tiene y yo me siento honrada de fomentar un entorno que prioriza el bienestar y la salud mental. Considero que la clave del éxito reside en el equilibrio entre trabajo y bienestar."',
+    titles: 'Psicológa',
+    strengths:
+      'Igualdad y Justicia - Cercanía y Afectividad - Entusiasmo y Energía',
+    linkedIn:
+      'https://www.linkedin.com/in/magdalena-faundes-de-la-barra-41957521a/',
+  },
+  {
+    src: stephy,
+    name: 'Stephany Vásquez',
+    charge: 'Directora académica OTEC',
+    description:
+      '"Comprender el proceso de aprendizaje como un continuo devenir nos otorga nuevas capacidades y experiencias que emergen de vivencias individuales y colectivas"',
+    titles: 'Docente, Educadora ambiental y Musicoterapeuta',
+    strengths:
+      'Perspectiva y Sabiduría - Capacidad Analítica y Apertura de Mente - Gratitud',
+    linkedIn:
+      'https://www.linkedin.com/in/stephany-v%C3%A1squez-ortiz-853919a3/',
   },
 ];
 
@@ -79,7 +118,7 @@ export default function Us({ image }: HomeProps) {
               y comprometidos con potenciar los talentos de tu empresa
             </h2>
           </div>
-          <section className="flex flex-wrap items-center justify-center gap-2 mx-auto px-4 sm:px-32 xl:px-60">
+          <section className="flex flex-wrap items-start justify-center gap-4 sm:gap-16 mx-auto px-4 sm:px-32 xl:px-60">
             {workers.map((w, index) => (
               <div key={index}>
                 <Worker
