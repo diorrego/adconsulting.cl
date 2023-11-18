@@ -5,15 +5,12 @@ import Layout from '../components/Layout';
 import Hero from '../components/Hero';
 import Clients from '../components/Clients';
 import Benefits from '../components/Benefits';
-import CallToAction from '../components/CallToAction';
 
 interface HomeProps {
   image: { url: string };
 }
 
 export default function Home({ image }: HomeProps) {
-  const CTARef = useRef<HTMLDivElement>(null);
-
   return (
     <>
       <Head>
@@ -56,13 +53,10 @@ export default function Home({ image }: HomeProps) {
         <link rel="icon" href="/favicon.ico" />
         <link rel="canonical" href="https://adconsulting.cl" key="canonical" />
       </Head>
-      <Layout CTARef={CTARef}>
+      <Layout>
         <Hero />
         <Clients />
         <Benefits />
-        <div ref={CTARef}>
-          <CallToAction />
-        </div>
       </Layout>
     </>
   );
