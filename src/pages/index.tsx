@@ -5,6 +5,7 @@ import Layout from '../components/Layout';
 import Hero from '../components/Hero';
 import Clients from '../components/Clients';
 import Benefits from '../components/Benefits';
+import Testimonials from '../components/Testimonials';
 
 interface HomeProps {
   image: { url: string };
@@ -57,6 +58,7 @@ export default function Home({ image }: HomeProps) {
         <Hero />
         <Clients />
         <Benefits />
+        <Testimonials />
       </Layout>
     </>
   );

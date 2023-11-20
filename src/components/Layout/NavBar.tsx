@@ -29,12 +29,12 @@ const NavBar = ({ CTARef }: NavBarProps) => {
     if (CTA)
       if (!notMobile) {
         window.scrollTo({
-          top: CTA.offsetTop - 10,
+          top: CTA.offsetTop,
           behavior: 'smooth',
         });
       } else {
         window.scrollTo({
-          top: CTA.offsetTop - 100,
+          top: CTA.offsetTop + 20,
           behavior: 'smooth',
         });
       }

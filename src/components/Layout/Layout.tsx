@@ -5,6 +5,7 @@ import NavBar from './NavBar';
 import Footer from './Footer';
 
 import CallToAction from '../../components/CallToAction';
+import WhatsappButton from './WhatsappButton';
 
 interface LayoutProps {
   children: JSX.Element | JSX.Element[];
@@ -14,13 +15,14 @@ interface LayoutProps {
 const Layout = ({ children }: LayoutProps) => {
   const CTARef = useRef<HTMLDivElement>(null);
   return (
-    <div className="overflow-x-hidden">
+    <div className="overflow-x-hidden flex flex-col">
       <NavBar CTARef={CTARef} />
       {children}
       <div ref={CTARef}>
         <CallToAction />
       </div>
       <Footer />
+      <WhatsappButton />
     </div>
   );
 };
