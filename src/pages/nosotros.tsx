@@ -127,7 +127,7 @@ const workers = [
     name: 'Pía Quevedo Godoy',
     charge: 'Consultora Senior',
     description:
-      '"Al ser parte de AD ha reforzado conceptos claves para mi vida profesional, el equipo de trabajo es comprometido, nos mueve el profesionalismo, compañerismo y la calidad humana de cada uno de los integrantes, en la que cada uno aporta a entregar el cien por ciento a nuestros procesos"',
+      '"Al ser parte de AD he reforzado conceptos claves para mi vida profesional, el equipo de trabajo es comprometido, nos mueve el profesionalismo, compañerismo y la calidad humana de cada uno de los integrantes, en la que cada uno aporta a entregar el cien por ciento a nuestros procesos"',
     titles: 'Psicóloga Organizacional',
     strengths:
       'Relaciones interpersonales, trabajo en equipo - Flexibilidad adaptación - Responsabilidad',
