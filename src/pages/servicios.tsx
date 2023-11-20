@@ -154,7 +154,7 @@ export default function Us({ image }: HomeProps) {
           </div>
         </div>
         <ScrollReveal className="w-full flex flex-col py-32 space-y-2 sm:space-y-8">
-          <h2 className="font-montserrat leading-tight text-center text-xl sm:text-2xl">
+          <h2 className="font-montserrat leading-tight text-center text-3xl sm:text-4xl">
             En AD estamos certificados por
           </h2>
           <div className="flex flex-col sm:flex-row items-center justify-center h-full mx-auto">
