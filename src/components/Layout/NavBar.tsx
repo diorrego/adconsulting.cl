@@ -1,5 +1,4 @@
-import { useEffect, useState, RefObject } from 'react';
-import { useRouter } from 'next/router';
+import { useState, RefObject } from 'react';
 import Link from 'next/link';
 import { HiMenu } from 'react-icons/hi';
 
@@ -10,15 +9,13 @@ import MenuMobile from './MenuMobile';
 import useMediaQuery from '../../hooks/useMediaQuery';
 
 interface NavBarProps {
-  CTARef: RefObject<HTMLDivElement> | undefined;
+  CTARef: RefObject<HTMLDivElement>;
 }
 
 const NavBar = ({ CTARef }: NavBarProps) => {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
-  const [goCTA, setGoCTA] = useState(false);
   const notMobile = useMediaQuery('sm');
-  const router = useRouter();
-  const pathname = router.pathname;
+  const CTA = CTARef.current;
 
   const closeMobileMenu = () => {
     setShowMobileMenu(false);
@@ -29,36 +26,19 @@ const NavBar = ({ CTARef }: NavBarProps) => {
   };
 
   const goToCTA = () => {
-    setShowMobileMenu(false);
-
-    if (pathname !== '/') {
-      router.push('/');
-    }
-
-    setGoCTA(true);
-  };
-
-  useEffect(() => {
-    if (pathname === '/' && CTARef) {
-      const CTA = CTARef.current;
-
-      if (CTA && goCTA) {
-        if (!notMobile) {
-          window.scrollTo({
-            top: CTA.offsetTop - 10,
-            behavior: 'smooth',
-          });
-        } else {
-          window.scrollTo({
-            top: CTA.offsetTop - 100,
-            behavior: 'smooth',
-          });
-        }
+    if (CTA)
+      if (!notMobile) {
+        window.scrollTo({
+          top: CTA.offsetTop,
+          behavior: 'smooth',
+        });
+      } else {
+        window.scrollTo({
+          top: CTA.offsetTop + 20,
+          behavior: 'smooth',
+        });
       }
-      setGoCTA(false);
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [goCTA]);
+  };
 
   return (
     <>

@@ -22,7 +22,7 @@ const Benefits = () => {
               En AD, nos encargamos de todo el proceso de selección, desde la
               identificación de candidatos y candidatas hasta la realización de
               entrevistas y evaluaciones, liberándote de tareas administrativas
-              para que te enfoques en hacer crecer tu negocio.
+              para que te enfoques en hacer crecer tu negocio
             </p>
           </div>
         </ScrollReveal>
@@ -36,7 +36,7 @@ const Benefits = () => {
               Nos enorgullece contar con una amplia y diversa red de
               profesionales talentosos y talentosas. Esto nos permite
               identificar a los candidatos y candidatas más prometedores para tu
-              empresa.
+              empresa
             </p>
           </div>
           <Connect className=" sm:scale-100 scale-75" />
@@ -50,12 +50,12 @@ const Benefits = () => {
             <p className="sm:text-xl">
               Somos tu socio estratégico en gestión de talento. Ofrecemos
               servicios adaptados a tus necesidades empresariales, comprendiendo
-              desafíos y diseñando estrategias a medida para impulsar tu éxito.
+              desafíos y diseñando estrategias a medida para impulsar tu éxito
             </p>
           </div>
         </ScrollReveal>
       </section>
-      <Wave className="absolute -bottom-1 left-0 w-full" />
+      <Wave className="absolute -bottom-1 w-full left-0 scale-110" />
     </div>
   );
 };
