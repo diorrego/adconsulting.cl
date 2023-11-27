@@ -7,23 +7,78 @@ import Carousel from './Carousel';
 import cpc from '../../../public/cpc.webp';
 import tomas from '../../../public/santoTomas.webp';
 import dsc from '../../../public/DSC.webp';
+import landes from '../../../public/Landes.webp';
+import mundo from '../../../public/mundo.webp';
 
 const Testimonials = () => {
   return (
-    <ScrollReveal className="flex flex-col sm:flex-row items-baseline justify-center space-y-8 sm:space-y-0 sm:space-x-12 px-8 sm:px-72 py-20">
-      <h2 className="text-2xl xl:text-4xl sm:basis-2/5 text-center sm:text-left">
+    <ScrollReveal className="flex flex-col xl:flex-row items-baseline justify-center space-y-8 xl:space-y-0 xl:space-x-12 px-8 2xl:px-72 py-20 mx-auto max-w-[40rem] xl:max-w-none">
+      <h2 className="text-2xl xl:text-4xl sm:basis-2/5 text-center xl:text-left w-full">
         Mira el <span className="font-semibold">impacto que generamos</span> en
-        nuestros clientes con AD
+        nuestros clientes
       </h2>
       <Carousel
         traits={[
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1 }}
+            key="4"
+            className="relative flex flex-col space-y-2 h-96 xl:h-64"
+          >
+            <h3 className="text-lg sm:text-xl font-semibold">
+              Maria de los Angeles Navarro Miranda | Jefa de Atracción del
+              Talento y Bienestar de MUNDO Telecomunicaciones
+            </h3>
+            <h4 className="text-xs sm:text-lg">
+              “Conozco AD Consulting desde el año 2011, ya que formé parte del
+              equipo, por lo que fui testigo desde adentro del profesionalismo,
+              compromiso hacia los clientes y cumplimiento de plazos. Cuando
+              llegué a MUNDO donde trabajo hace casi 10 años, fue un orgullo
+              para mi poder recomendar a AD. Los resultados han sido muy
+              positivos, su compromiso con el cliente, la comunicación constante
+              y excelente disponibilidad son parte de sus sellos como empresa”
+            </h4>
+            <Image
+              src={mundo}
+              alt="MUNDO"
+              className="absolute bottom-0 -right-6 w-32 self-end"
+            />
+          </motion.div>,
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1 }}
+            key="5"
+            className="relative flex flex-col space-y-2 h-96 xl:h-64"
+          >
+            <h3 className="text-lg sm:text-xl font-semibold">
+              Carla Sánchez | Gerenta Asuntos Corporativos y Personas Landes
+            </h3>
+            <h4 className="text-xs sm:text-lg">
+              “AD Consulting ha liderado varios procesos de búsqueda en Landes y
+              hemos tenido muy buena experiencia. Siempre están disponibles
+              entregando un servicio muy personalizado, ajustan las búsquedas
+              cuando es necesario y hacen un buen seguimiento a las nuevas
+              incorporaciones. Además, cumplen con los plazos acordados, los
+              procesos son transparentes y tienen un equipo de trabajo muy
+              cercano y profesional”
+            </h4>
+            <Image
+              src={landes}
+              alt="Landes"
+              className="absolute bottom-0 -right-6 w-32 self-end"
+            />
+          </motion.div>,
           <motion.div
             initial={{ opacity: 0.6 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 1 }}
             key="1"
-            className="relative flex flex-col space-y-2 h-80 sm:h-64"
+            className="relative flex flex-col space-y-2 h-96 xl:h-64"
           >
             <h3 className="text-lg sm:text-xl font-semibold">
               Ronald Ruf Wilkomirsky | Gerente General CPC Bio Bio
@@ -49,7 +104,7 @@ const Testimonials = () => {
             exit={{ opacity: 0 }}
             transition={{ duration: 1 }}
             key="2"
-            className="relative flex flex-col space-y-2 h-80 sm:h-64"
+            className="relative flex flex-col space-y-2 h-96 xl:h-64"
           >
             <h3 className="text-lg sm:text-xl font-semibold">
               Roger Sepúlveda Carrasco | Rector Universidad Santo Tomás
@@ -74,7 +129,7 @@ const Testimonials = () => {
             exit={{ opacity: 0 }}
             transition={{ duration: 1 }}
             key="3"
-            className="relative flex flex-col space-y-2 h-80 sm:h-64"
+            className="relative flex flex-col space-y-2 h-96 xl:h-64"
           >
             <h3 className="text-lg sm:text-xl font-semibold">
               Werner Hohf | Gerente Corp. Colegio Alemán de Concepción

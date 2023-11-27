@@ -61,6 +61,22 @@ const MenuMobile = ({ closeMobileMenu, goToCTA }: MenuMobileProps) => {
           </Link>
         </li>
         <li>
+          <a
+            href="https://aulavirtual.adcapacitaciones.cl/login/index.php"
+            className="text-lg font-semibold leading-normal hover:scale-[1.01] transition-all pb-2 pl-3"
+          >
+            Aula Virtual
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://adconsulting.trabajando.cl/"
+            className="text-lg font-semibold leading-normal hover:scale-[1.01] transition-all pb-2 pl-3"
+          >
+            Ofertas de Trabajo
+          </a>
+        </li>
+        <li>
           <button
             className="rounded-full h-fit py-3 px-4 hover:scale-[1.01] transition-all bg-[#ED7423] text-white text-lg font-semibold"
             onClick={goToCTA}

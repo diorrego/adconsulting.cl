@@ -17,7 +17,7 @@ const Footer = () => {
         personas adecuadas para cada desafío
       </h2>
       <div className="flex flex-col sm:flex-row items-center justify-between space-y-12 sm:space-y-0">
-        <div className="flex flex-row space-x-6 items-center h-fit">
+        <div className="flex flex-wrap gap-6 items-center justify-center h-fit">
           <Link href="/">
             <AD className="scale-[1.40] hover:scale-[1.01] transition-all" />
           </Link>
@@ -32,6 +32,18 @@ const Footer = () => {
                 Servicios
               </p>
             </Link>
+            <a
+              href="https://aulavirtual.adcapacitaciones.cl/login/index.php"
+              className="cursor-pointer hover:scale-[1.01] transition-all text-white font-semibold"
+            >
+              Aula Virtual
+            </a>
+            <a
+              href="https://adconsulting.trabajando.cl/"
+              className="cursor-pointer hover:scale-[1.01] transition-all text-white font-semibold"
+            >
+              Ofertas de Trabajo
+            </a>
           </>
         </div>
         <div className="text-white text-5xl flex flex-row space-x-4 h-fit">
@@ -43,7 +55,7 @@ const Footer = () => {
             <AiFillInstagram />
           </a>
           <a
-            href="https://www.linkedin.com/company/ad-consulting-chile/"
+            href="https://www.linkedin.com/in/ariela-dymensztain-ad/"
             title="LinkedIn de AD Consulting"
             aria-label="LinkedIn de AD Consulting"
           >

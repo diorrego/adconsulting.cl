@@ -12,15 +12,11 @@ import classes from '../../public/capacitaciones.webp';
 import icontec from '../../public/icontec.webp';
 import sence from '../../public/sence.webp';
 import unWomen from '../../public/unWomen.webp';
+import sello from '../../public/SelloMujer.webp';
 
-import Wave from '../components/Wave';
 import ScrollReveal from '../components/ScrollReveal';
 
-interface HomeProps {
-  image: { url: string };
-}
-
-export default function Us({ image }: HomeProps) {
+export default function Services() {
   return (
     <>
       <Head>
@@ -28,7 +24,7 @@ export default function Us({ image }: HomeProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="keywords"
-          content="head hunting, selección y reclutamiento, coaching ejecutivo, capacitación, outplacement"
+          content="head hunting, selección y reclutamiento, coaching ejecutivo, capacitación, outplacement, recursos humanos, gestión de personas, formación, entrenamiento"
         />
         <meta
           name="description"
@@ -36,7 +32,7 @@ export default function Us({ image }: HomeProps) {
         />
         <meta property="og:title" content="AD Consulting | Servicios" />
         <meta property="og:url" content="https://adconsulting.cl/servicios" />
-        <meta property="og:image" content={image?.url} />
+        <meta property="og:image" content="/previewPhoto.webp" />
         <meta property="og:type" content="website" />
         <meta
           property="og:description"
@@ -49,7 +45,7 @@ export default function Us({ image }: HomeProps) {
           content="Más de 11 años de experiencia en procesos de Head Hunting, Reclutamiento y Selección de Talentos, Outplacement, Capacitación y Coaching Ejecutivo"
         />
         <meta name="twitter:creator" content="@diorrego" />
-        <meta name="twitter:image" content={image?.url} />
+        <meta name="twitter:image" content="/previewPhoto.webp" />
         <meta name="author" content="Diego Orrego" />
         <meta name="robots" content="index,follow" />
         <meta name="googlebot" content="index,follow" />
@@ -64,7 +60,7 @@ export default function Us({ image }: HomeProps) {
       <Layout>
         <div className="relative pt-28 sm:pt-32 flex flex-col space-y-8 sm:space-y-16 items-center">
           <div className="flex flex-col space-y-4">
-            <h1 className="font-montserrat leading-tight text-center text-3xl sm:text-4xl">
+            <h1 className="font-montserrat leading-tight text-center text-3xl sm:text-4xl text-orange-600">
               Nuestros Servicios
             </h1>
             <h2 className="text-center mx-auto max-w-[35rem] sm:text-xl">
@@ -145,7 +141,7 @@ export default function Us({ image }: HomeProps) {
                 <h2 className="sm:text-lg text-center sm:text-left">
                   Somos un Organismo Técnico de Capacitación (OTEC) reconocido
                   en Chile por el Servicio Nacional de Capacitación y Empleo
-                  (SENCE) y certificado bajo las norma de calidad NCh 2728 para
+                  (SENCE) y certificado bajo la norma de calidad NCh 2728 para
                   OTEC
                 </h2>
               </div>
@@ -154,7 +150,7 @@ export default function Us({ image }: HomeProps) {
           </div>
         </div>
         <ScrollReveal className="w-full flex flex-col py-32 space-y-2 sm:space-y-8">
-          <h2 className="font-montserrat leading-tight text-center text-3xl sm:text-4xl">
+          <h2 className="font-montserrat leading-tight text-center text-3xl sm:text-4xl text-orange-600">
             En AD estamos certificados por
           </h2>
           <div className="flex flex-col sm:flex-row items-center justify-center h-full mx-auto">
@@ -163,14 +159,25 @@ export default function Us({ image }: HomeProps) {
               alt="sence"
               className="w-32 sm:h-40 sm:w-80 object-contain"
             />
-            <Image
-              src={icontec}
-              alt="otec"
-              className="w-32 sm:h-40 sm:w-80 object-contain"
-            />
+            <a
+              href="/certificado_ad_capacitacion.pdf"
+              className="flex flex-col items-center justify-center hover:scale-[1.01] transition-all"
+            >
+              <Image
+                src={icontec}
+                alt="otec"
+                className="w-32 sm:h-40 sm:w-80 object-contain cursor-pointer"
+              />
+              <div className="text-xs font-semibold">OC-CER829828</div>
+            </a>
             <Image
               src={unWomen}
               alt="un women"
+              className="w-32 sm:h-40 sm:w-80 object-contain"
+            />
+            <Image
+              src={sello}
+              alt="Sello Mujer"
               className="w-32 sm:h-40 sm:w-80 object-contain"
             />
           </div>
@@ -179,13 +186,3 @@ export default function Us({ image }: HomeProps) {
     </>
   );
 }
-
-export const getServerSideProps = async () => {
-  return {
-    props: {
-      image: {
-        url: 'https://ik.imagekit.io/dior7woku/ad-consulting/previewPhoto.webp?updatedAt=1692544312682',
-      },
-    },
-  };
-};
