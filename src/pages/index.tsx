@@ -1,4 +1,3 @@
-import { useRef } from 'react';
 import Head from 'next/head';
 
 import Layout from '../components/Layout';
@@ -7,11 +6,7 @@ import Clients from '../components/Clients';
 import Benefits from '../components/Benefits';
 import Testimonials from '../components/Testimonials';
 
-interface HomeProps {
-  image: { url: string };
-}
-
-export default function Home({ image }: HomeProps) {
+export default function Home() {
   return (
     <>
       <Head>
@@ -19,7 +14,7 @@ export default function Home({ image }: HomeProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="keywords"
-          content="head hunting, selección y reclutamiento, coaching ejecutivo, capacitación, outplacement"
+          content="head hunting, selección y reclutamiento, coaching ejecutivo, capacitación, outplacement, recursos humanos, gestión de personas, formación, entrenamiento"
         />
         <meta
           name="description"
@@ -30,7 +25,7 @@ export default function Home({ image }: HomeProps) {
           content="AD Consulting | Seleccionamos y Potenciamos el Talento de tu Empresa"
         />
         <meta property="og:url" content="https://adconsulting.cl" />
-        <meta property="og:image" content={image?.url} />
+        <meta property="og:image" content="/previewPhoto.webp" />
         <meta property="og:type" content="website" />
         <meta
           property="og:description"
@@ -46,7 +41,7 @@ export default function Home({ image }: HomeProps) {
           content="Más de 11 años de experiencia en procesos de Head Hunting, Reclutamiento y Selección de Talentos, Outplacement, Capacitación y Coaching Ejecutivo"
         />
         <meta name="twitter:creator" content="@diorrego" />
-        <meta name="twitter:image" content={image?.url} />
+        <meta name="twitter:image" content="/previewPhoto.webp" />
         <meta name="author" content="Diego Orrego" />
         <meta name="robots" content="index,follow" />
         <meta name="googlebot" content="index,follow" />
@@ -63,13 +58,3 @@ export default function Home({ image }: HomeProps) {
     </>
   );
 }
-
-export const getServerSideProps = async () => {
-  return {
-    props: {
-      image: {
-        url: 'https://ik.imagekit.io/dior7woku/ad-consulting/previewPhoto.webp?updatedAt=1692544312682',
-      },
-    },
-  };
-};

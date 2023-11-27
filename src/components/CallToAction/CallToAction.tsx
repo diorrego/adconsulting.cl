@@ -35,7 +35,7 @@ const CallToAction = () => {
   };
 
   return (
-    <ScrollReveal className="relative px-4 sm:px-0 py-40 z-40 h-[100vh]">
+    <ScrollReveal className="relative px-4 sm:px-0 py-40 z-40 h-[120vh] sm:h-[100vh]">
       <form
         ref={form}
         className="absolute inset-0 flex flex-col items-center justify-center space-y-4 sm:space-y-8 p-6 text-white gradient-box max-w-[35rem] m-auto z-20 h-fit mx-2 sm:mx-auto"
@@ -70,6 +70,15 @@ const CallToAction = () => {
             type="email"
             name="email"
             placeholder="Ingresa tu email"
+          />
+        </label>
+        <label className="flex flex-col space-y-2 w-full">
+          <p>Celular</p>
+          <input
+            className="border border-neutral-400 rounded-md p-1 w-full h-14 bg-white text-neutral-800 outline-orange-200"
+            type="text"
+            name="celular"
+            placeholder="Ingresa tu celular"
           />
         </label>
         {isError ? (

@@ -29,12 +29,12 @@ const NavBar = ({ CTARef }: NavBarProps) => {
     if (CTA)
       if (!notMobile) {
         window.scrollTo({
-          top: CTA.offsetTop,
+          top: CTA.offsetTop - 50,
           behavior: 'smooth',
         });
       } else {
         window.scrollTo({
-          top: CTA.offsetTop + 20,
+          top: CTA.offsetTop,
           behavior: 'smooth',
         });
       }
@@ -65,6 +65,18 @@ const NavBar = ({ CTARef }: NavBarProps) => {
                   Servicios
                 </p>
               </Link>
+              <a
+                href="https://aulavirtual.adcapacitaciones.cl/login/index.php"
+                className="cursor-pointer hover:scale-[1.01] transition-all font-semibold"
+              >
+                Aula Virtual
+              </a>
+              <a
+                href="https://adconsulting.trabajando.cl/"
+                className="cursor-pointer hover:scale-[1.01] transition-all font-semibold"
+              >
+                Ofertas de Trabajo
+              </a>
             </>
           )}
         </div>
