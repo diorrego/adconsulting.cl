@@ -99,8 +99,8 @@ const Clients = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
-                transition={{ duration: 1 }}
-                key="1"
+                transition={{ duration: 1.5 }}
+                key="2"
                 className="relative flex flex-row"
               >
                 <Image
@@ -120,8 +120,8 @@ const Clients = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
-                transition={{ duration: 1 }}
-                key="1"
+                transition={{ duration: 1.5 }}
+                key="3"
                 className="relative flex flex-row"
               >
                 <Image
@@ -142,7 +142,7 @@ const Clients = () => {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 1 }}
-                key="1"
+                key="4"
                 className="relative flex flex-row items-center -space-x-8"
               >
                 <Image
