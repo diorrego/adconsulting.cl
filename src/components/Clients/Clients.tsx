@@ -86,11 +86,13 @@ const Clients = () => {
                   src={mundo}
                   alt="MUNDO"
                   className="w-48 sm:h-40 sm:w-80 object-contain"
+                  unoptimized
                 />
                 <Image
                   src={landes}
                   alt="Landes"
                   className="w-48 sm:h-40 sm:w-80 object-contain"
+                  unoptimized
                 />
               </motion.div>,
               <motion.div
@@ -105,11 +107,13 @@ const Clients = () => {
                   src={innergy}
                   alt="Innergy"
                   className="w-48 sm:h-40 sm:w-80 object-contain"
+                  unoptimized
                 />
                 <Image
                   src={aleman}
                   alt="Colegio Aleman"
                   className="w-48 sm:h-40 sm:w-80 object-contain"
+                  unoptimized
                 />
               </motion.div>,
               <motion.div
@@ -124,11 +128,13 @@ const Clients = () => {
                   src={chequen}
                   alt="Empresas Chequén"
                   className="w-48 sm:h-40 sm:w-80 object-contain"
+                  unoptimized
                 />
                 <Image
                   src={tomas}
                   alt="Universidad Santo Tomás"
                   className="w-48 sm:h-40 sm:w-80 object-contain"
+                  unoptimized
                 />
               </motion.div>,
               <motion.div
@@ -143,11 +149,13 @@ const Clients = () => {
                   src={saint}
                   alt="Colegio Saint John's"
                   className="w-48 sm:h-40 sm:w-80 object-contain"
+                  unoptimized
                 />
                 <Image
                   src={isola}
                   alt="ISOLA"
                   className="w-48 sm:h-40 sm:w-80 object-contain"
+                  unoptimized
                 />
               </motion.div>,
             ]}
