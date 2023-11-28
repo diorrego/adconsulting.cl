@@ -134,9 +134,10 @@ export default function Services() {
                   Capacitaciones
                 </h3>
                 <h2 className="sm:text-lg text-center sm:text-left">
-                  Acercamos la formación y capacitación a las personas y
-                  organizaciones, a través de programas de educación continua
-                  e-learning, b-learning y presencial
+                  La clave de nuestro enfoque es la personalización: diseñamos
+                  programas de formación en e-learning, b-learning y
+                  presenciales que se ajustan a tus necesidades, garantizando
+                  una intervención efectiva.
                 </h2>
                 <h2 className="sm:text-lg text-center sm:text-left">
                   Somos un Organismo Técnico de Capacitación (OTEC) reconocido

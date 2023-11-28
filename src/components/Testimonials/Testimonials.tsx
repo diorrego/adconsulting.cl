@@ -9,6 +9,7 @@ import tomas from '../../../public/santoTomas.webp';
 import dsc from '../../../public/DSC.webp';
 import landes from '../../../public/Landes.webp';
 import mundo from '../../../public/mundo.webp';
+import colegio from '../../../public/colegioAleman.webp';
 
 const Testimonials = () => {
   return (
@@ -142,8 +143,32 @@ const Testimonials = () => {
               perfiles desarrollados en conjunto”
             </h4>
             <Image
-              src={dsc}
+              src={colegio}
               alt="Colegio Alemán Concepción"
+              className="absolute bottom-0 -right-4 w-16 self-end"
+            />
+          </motion.div>,
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1 }}
+            key="3"
+            className="relative flex flex-col space-y-2 h-96 xl:h-64"
+          >
+            <h3 className="text-lg sm:text-xl font-semibold">
+              José Antonio Ciriza | Gerente General de Club Deportivo Alemán
+            </h3>
+            <h4 className="text-xs sm:text-lg">
+              “Valoramos el apoyo entregado por AD Consulting , con dedicación y
+              compromiso han liderado los procesos de búsqueda de profesionales
+              que le hemos encargado, gran satisfacción por los servicios
+              entregados, cumpliendo con nuestros requerimientos en tiempo y
+              calidad”
+            </h4>
+            <Image
+              src={dsc}
+              alt="Deportivo Alemán Concepción"
               className="absolute bottom-0 -right-16 w-40 self-end"
             />
           </motion.div>,

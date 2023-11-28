@@ -1,6 +1,5 @@
 import Image from 'next/image';
 
-import aleman from '../../../public/DSC.webp';
 import innergy from '../../../public/Innergy.webp';
 import isola from '../../../public/isola.webp';
 import saint from '../../../public/saintJohns.webp';
@@ -8,6 +7,7 @@ import tomas from '../../../public/santoTomas.webp';
 import chequen from '../../../public/Chequen.webp';
 import landes from '../../../public/Landes.webp';
 import mundo from '../../../public/mundo.webp';
+import colegio from '../../../public/colegioAleman.webp';
 
 import ScrollReveal from '../ScrollReveal';
 import useMediaQuery from '../../hooks/useMediaQuery';
@@ -43,7 +43,7 @@ const Clients = () => {
                 className="w-48 sm:h-40 sm:w-80 object-contain"
               />
               <Image
-                src={aleman}
+                src={colegio}
                 alt="Colegio Aleman"
                 className="w-48 sm:h-40 sm:w-80 object-contain"
               />
@@ -110,7 +110,7 @@ const Clients = () => {
                   unoptimized
                 />
                 <Image
-                  src={aleman}
+                  src={colegio}
                   alt="Colegio Aleman"
                   className="w-48 sm:h-40 sm:w-80 object-contain"
                   unoptimized

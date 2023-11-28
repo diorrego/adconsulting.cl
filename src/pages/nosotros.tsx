@@ -32,13 +32,13 @@ const workers = [
   },
   {
     src: piero,
-    name: 'Piero Lavezzo',
+    name: 'Gian Piero Lavezzo',
     charge: 'Socio Gerente',
     description:
       '"Tengo la convicción que no hay metas que no se puedan cumplir, que el líder es el puente entre la visión y hacer las cosas realidad. El liderazgo es u ejercicio de estrategia, humildad, pero sobre todo valentía"',
     titles: 'Psicólogo Organizacional',
     strengths:
-      'Promuevo la equidad y diversidad - Te acompaño en conseguir tus sueños - Estrategia e implementación',
+      'Promuevo la equidad y diversidad - Te acompaño en conseguir tus metas - Estrategia e implementación',
     linkedIn: 'https://www.linkedin.com/in/gianpierolavezzo/',
   },
   {
@@ -107,17 +107,18 @@ const workers = [
     titles: 'Psicóloga',
     strengths:
       'Igualdad y Justicia - Cercanía y Afectividad - Entusiasmo y Energía',
+    linkedIn: 'https://www.linkedin.com/in/evelyn-jofr%C3%A9-rivera-834b8b81/',
   },
   {
     src: danilo,
-    name: 'Danilo Espinoza',
+    name: 'Danilo Vásquez',
     charge: 'Consultor Senior',
     description: '"El bienestar no se busca, se construye"',
     titles: 'Psicólogo Organizacional',
     strengths:
       'Amor por el Conocimiento y el Aprendizaje - Orientación a la Calidad - Perseverancia',
     linkedIn:
-      'https://www.linkedin.com/in/danilo-andr%C3%A9s-espinoza-v%C3%A1squez-694a0296/',
+      'https://www.linkedin.com/in/danilo-andr%C3%A9s-v%C3%A1squez-espinoza-3b5499207/',
   },
   {
     src: pia,
