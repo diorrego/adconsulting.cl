@@ -18,7 +18,7 @@ const Clients = () => {
   const notMobile = useMediaQuery('md');
 
   return (
-    <section className="relative flex flex-col space-y-12 pt-16 pb-32">
+    <section className="relative flex flex-col space-y-12 pt-16 pb-32 h-[70vh] sm:h-full">
       <h2 className="text-center text-3xl sm:text-4xl font-medium text-orange-600 max-w-[40rem] mx-auto">
         ¡Impactando en la productividad de{' '}
         <span className="font-extrabold">+100 empresas</span>!
@@ -101,7 +101,7 @@ const Clients = () => {
                 exit={{ opacity: 0 }}
                 transition={{ duration: 1.5 }}
                 key="2"
-                className="relative flex flex-row"
+                className="relative flex flex-row space-x-8"
               >
                 <Image
                   src={innergy}
@@ -112,7 +112,7 @@ const Clients = () => {
                 <Image
                   src={colegio}
                   alt="Colegio Aleman"
-                  className="w-48 sm:h-40 sm:w-80 object-contain"
+                  className="w-28 sm:h-40 sm:w-80 object-contain"
                   unoptimized
                 />
               </motion.div>,
